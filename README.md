@@ -1,10 +1,8 @@
 # University-College-London-Crime-and-Security-Science
 
-In each year of your degree you will take a number of individual modules, normally valued at 15 or 30 credits, adding up to a total of 120 credits for the year. Modules are assessed in the academic year in which they are taken. The balance of compulsory and optional modules varies from programme to programme and year to year. A 30-credit module is considered equivalent to 15 credits in the European Credit Transfer System (ECTS).
+The BSc in Crime and Security Science aims to create a generation of leaders in the crime, intelligence and security sectors. Using science from different disciplines (psychology, political science, statistics, computer science and geography) you will learn to tackle real-world crime problems and develop creative and ethical ways to increase security in a changing world.
 
-Upon successful completion of 360 credits, you will be awarded a BSc (Hons) in Crime and Security Science.
-
-University College London, BSc Crime and Security Science (Department of Security and Crime Science, Faculty of Engineering Sciences) 
+BSc Crime and Security Science (Department of Security and Crime Science, Faculty of Engineering Sciences) 
 
 Societies (UCL Artificial Intelligence Society, UCL Blockchain Labs Society, UCL Physics Society, UCL Malaysian Society)
 
