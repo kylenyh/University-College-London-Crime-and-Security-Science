@@ -31,3 +31,6 @@ Year 3 Modules
 * SECU0050, Data Science for Crime Scientists (Compulsory)
 * SECU0051, Criminal Investigation and Intelligence (Compulsory)
 * SECU0053, Security and Crime Science Research Project (Compulsory)
+* SOCS0081, Social Networks (Optional)
+* SECU0063, Digital Forensic Science and Technology (Optional)
+* BASC0080, Computer Simulations in Science and Engineering (Optional)
