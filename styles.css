@@ -2700,6 +2700,7 @@ body {
     padding: 18px 20px;
     font-size: 14px;
     color: #e0e0e0;
+    white-space: nowrap;
 }
 
 .session-table td:first-child {
