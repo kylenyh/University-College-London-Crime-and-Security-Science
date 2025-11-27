@@ -281,6 +281,8 @@ body {
 .page-content {
     display: none;
     animation: fadeIn 0.3s ease-in;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Active page is visible */
@@ -676,20 +678,34 @@ body {
    PRIVACY PAGE STYLES
    ============================================ */
 
-/* Privacy page layout */
-.privacy-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    padding: 0 20px 40px 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
+/* Privacy page layout - match Features page structure */
 #privacy-page {
     background-color: #0a0a0a;
     min-height: 100vh;
     padding-bottom: 40px;
+}
+
+#privacy-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#privacy-page .page-header {
+    margin-bottom: 30px;
+}
+
+.privacy-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#privacy-page .restricted-access-popup {
+    margin: 30px auto;
 }
 
 /* Privacy cards */
@@ -842,10 +858,23 @@ body {
    ============================================ */
 
 /* Notifications container */
+/* Notifications page container wrapper - match Features page structure */
+#notifications-page {
+    padding-bottom: 40px;
+}
+
 .notifications-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
+}
+
+#notifications-page .page-header {
+    margin-bottom: 30px;
+}
+
+#notifications-page .restricted-access-popup {
+    margin: 30px auto;
 }
 
 /* Notifications header */
@@ -858,6 +887,9 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .notification-badge-wrapper {
@@ -877,7 +909,8 @@ body {
     color: cyan;
 }
 
-.bell-count {
+/* Bell count badge for notifications page */
+.page-badge .bell-count {
     position: absolute;
     top: -8px;
     right: -8px;
@@ -892,6 +925,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     padding: 0 6px;
+    z-index: 10;
 }
 
 .notification-text {
@@ -1178,15 +1212,29 @@ body {
     font-size: 18px;
 }
 
+/* Calendar page container wrapper - match Features page structure */
+#calendar-page {
+    padding-bottom: 40px;
+}
+
+#calendar-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+}
+
+#calendar-page .page-header {
+    margin-bottom: 30px;
+}
+
 .calendar-container {
     background-color: #1a1a1a;
     border: 1px solid white;
     border-radius: 16px;
     padding: 40px;
-    max-width: 1300px;
-    width: 100%;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    max-width: 1500px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* Calendar header */
@@ -1456,7 +1504,7 @@ body {
    ============================================ */
 
 /* Force hide all page content by default */
-.page-content {
+.page-content:not(.active) {
     display: none !important;
 }
 
@@ -1464,6 +1512,9 @@ body {
 .page-content.active {
     display: block !important;
     animation: fadeIn 0.3s ease-in;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100%;
 }
 
 /* Extra protection: ensure calendar is completely hidden when not active */
@@ -1495,10 +1546,19 @@ body {
    ACCOUNT PAGE STYLES - UPDATED
    ============================================ */
 
+/* Account page container wrapper - match Features page structure */
+#account-page {
+    padding-bottom: 40px;
+}
+
 .account-container {
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px 40px 20px;
+    padding: 20px;
+}
+
+#account-page .page-header {
+    margin-bottom: 30px;
 }
 
 
@@ -2637,6 +2697,9 @@ body {
     border-radius: 15px;
     padding: 25px;
     border: 2px solid white;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .session-history-header {
@@ -3882,16 +3945,14 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .research-overview-header,
-    .features-header-box,
-    .notifications-header {
+    .features-header-box {
         flex-direction: column;
         text-align: center;
         padding: 30px;
     }
     
     .overview-title,
-    .features-page-title,
-    .notifications-main-title {
+    .features-page-title {
         font-size: 24px;
     }
     
@@ -3910,6 +3971,9 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .page-badge {
@@ -3921,6 +3985,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    position: relative;
 }
 
 .page-badge i {
@@ -3960,9 +4025,20 @@ body {
 
 
 /* FAQ Page Styles */
+/* Queries (FAQ) page container wrapper - match Features page structure */
+#faq-page {
+    padding-bottom: 40px;
+}
+
 .faq-container {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#faq-page .page-header {
+    margin-bottom: 30px;
 }
 
 .faq-section {
@@ -4094,6 +4170,9 @@ body {
     border-radius: 12px;
     padding: 30px 40px;
     margin-bottom: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .faq-header-content {
@@ -4124,6 +4203,7 @@ body {
 .resources-container {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Resources Header */
@@ -4160,6 +4240,21 @@ body {
     margin: 0;
 }
 
+/* Resources page container wrapper - match Features page structure */
+#resources-page {
+    padding-bottom: 40px;
+}
+
+.resources-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#resources-page .page-header {
+    margin-bottom: 30px;
+}
+
 /* Resource Tabs */
 .resource-tabs {
     display: flex;
@@ -4172,12 +4267,12 @@ body {
     background-color: black;
     border: 2px solid white;
     border-radius: 25px;
-    padding: 12px 24px;
+    padding: 10px 20px;
     color: white;
     font-size: 16px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -5228,7 +5323,8 @@ body {
     background-color: #1a1a1a;
     border: 1px solid cyan;  /* ADD THIS LINE */
     border-radius: 8px;        /* ADD THIS LINE */
-    margin: 0 25px 25px 25px;  /* ADD THIS LINE for spacing from edges */
+    margin: 20px 0 25px 25px;  /* Removed right margin to shift left */
+    max-width: 700px;  /* Limit width so it doesn't stretch */
 }
 
 .legend-info-box i {
@@ -5293,6 +5389,29 @@ body {
 /* ============================================
    PRIVACY CONTROLS HEADER
    ============================================ */
+/* Privacy Form (Report) page container wrapper - match Features page structure */
+#report-page {
+    padding-bottom: 40px;
+}
+
+#report-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#report-page .privacy-controls-header {
+    margin-bottom: 30px;
+}
+
+#report-page .restricted-access-popup {
+    margin: 30px auto;
+}
+
+#report-page .questionnaire-container {
+    width: 100%;
+}
+
 .privacy-controls-header {
     display: flex;
     align-items: center;
@@ -5302,6 +5421,9 @@ body {
     border: 2px solid white;
     border-radius: 15px;
     margin-bottom: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .privacy-controls-header i {
@@ -5330,6 +5452,9 @@ body {
     border: solid 2px white;
     border-radius: 15px;
     padding: 50px 60px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .question-block {
@@ -5345,7 +5470,8 @@ body {
     background: black;
     border: 2px solid #00CED1;
     border-radius: 12px;
-    margin: 40px 0;
+    margin: 40px auto;
+    max-width: 500px;
     overflow: hidden;
     transition: all 0.3s ease;
 }
@@ -8051,6 +8177,29 @@ body {
 
 /* Hide content sections by default - they will be shown after authentication */
 .notifications-content,
+/* Logs page container wrapper - match Features page structure */
+#logs-page {
+    padding-bottom: 40px;
+}
+
+#logs-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#logs-page .page-header {
+    margin-bottom: 30px;
+}
+
+#logs-page .restricted-access-popup {
+    margin: 30px auto;
+}
+
+#logs-page .logs-content {
+    width: 100%;
+}
+
 .logs-content {
     display: none;
 }
@@ -8058,4 +8207,228 @@ body {
 .notifications-content.authenticated,
 .logs-content.authenticated {
     display: block;
+}
+
+/* ============================================
+   TREASURE HUNT PAGE STYLES
+   ============================================ */
+
+/* Welcome Box */
+.treasure-welcome-box {
+    text-align: left;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+
+.treasure-welcome-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.treasure-welcome-icon {
+    font-size: 28px;
+    color: cyan;
+}
+
+.treasure-welcome-title {
+    margin: 0 0 10px 0;
+    color: white;
+    font-size: 20px;
+}
+
+.treasure-welcome-description {
+    margin: 0 0 15px 0;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.treasure-welcome-cta {
+    margin: 0;
+    color: cyan;
+    font-size: 14px;
+}
+
+.treasure-welcome-cta i {
+    margin-right: 8px;
+}
+
+/* Module Number Badge */
+.module-number {
+    background: cyan;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Meta Icon in FAQ */
+.meta-icon {
+    color: #0866FF;
+    margin-right: 10px;
+}
+
+/* Continue Learning Box */
+.treasure-continue-box {
+    text-align: center;
+    padding: 40px;
+    background-color: black;
+    border: 1px solid cyan;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.treasure-continue-icon {
+    font-size: 40px;
+    color: cyan;
+    margin-bottom: 15px;
+}
+
+.treasure-continue-title {
+    margin: 0 0 15px 0;
+    color: white;
+    font-size: 22px;
+}
+
+.treasure-continue-description {
+    margin: 0;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Treasure Hunt Page - Compact Module Styling */
+#treasure-hunt-page .faq-section {
+    background-color: transparent;
+    border: none;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#treasure-hunt-page .section-header {
+    margin-bottom: 5px;
+}
+
+#treasure-hunt-page .section-header h2 {
+    font-size: 20px;
+}
+
+#treasure-hunt-page .section-description {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #888;
+}
+
+#treasure-hunt-page .faq-item {
+    margin-bottom: 5px;
+}
+
+#treasure-hunt-page .faq-question {
+    padding: 12px 18px;
+}
+
+#treasure-hunt-page .faq-question .fa-meta {
+    color: #0866FF;
+}
+
+#treasure-hunt-page .faq-item.active .faq-question .fa-meta {
+    transform: rotate(0deg);
+}
+
+/* ============================================
+   TREASURE HUNT PROGRESS BAR
+   ============================================ */
+
+.progress-container {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.progress-title {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.progress-count {
+    color: cyan;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.progress-bar-wrapper {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    background-color: cyan;
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* ============================================
+   META AD HEADER BOX
+   ============================================ */
+
+.meta-ad-header-box {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+}
+
+.meta-ad-header-title {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.meta-ad-header-title i {
+    color: #0866FF;
+}
+
+.meta-ad-header-description {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
 }
